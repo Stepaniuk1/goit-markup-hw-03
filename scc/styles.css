@@ -16,6 +16,7 @@ html {
   --brend-color: #4d5ae5;
   --title-color: #2e2f42;
   --active-color: #404bbf;
+  --background-color-team: #f4f4fd;
 }
 
 body {
@@ -39,10 +40,20 @@ ul {
   outline: 2px solid red;
 }
 
+.container-nav {
+  align-items: center;
+  display: flex;
+}
+
+.logo {
+  padding-right: 76px;
+}
 .logo-fisrt {
   color: var(--brend-color);
 }
 .logo-second {
+  gap: 76px;
+
   color: var(--title-color);
   font-family: 'Raleway';
   font-style: normal;
@@ -55,11 +66,17 @@ ul {
 }
 
 .site-nav {
+  gap: 40px;
+
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 .nav-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: block;
   color: var(--main-color);
   text-decoration: none;
   font-weight: 500;
@@ -78,9 +95,14 @@ ul {
   color: var(--active-color);
 }
 
+.address-container {
+  display: flex;
+}
 .address {
-  margin: 0;
-  padding: 0;
+  padding: 24px 0px 24px 0px;
+  gap: 40px;
+  display: flex;
+  margin: 0px;
 
   color: var(--main-color);
 }
@@ -91,9 +113,16 @@ ul {
   font-style: normal;
   text-decoration: none;
 }
+
+.nav-address {
+  justify-content: space-between;
+  display: flex;
+}
+
 /*hero*/
 .hero {
-  height: 600px;
+  padding: 188px 0px 188px 0px;
+
   text-align: center;
   background: var(--title-color);
   outline: 2px solid red;
@@ -102,15 +131,16 @@ ul {
   width: 494px;
   display: inline-block;
   margin: 0px;
-  padding: 188px 0px 48px 0px ;
-  );
+
+  color: var(--white-color);
   font-size: 56px;
   line-height: 1.07;
 }
 .button-hero {
   padding: 16px 32px;
   display: flex;
-
+  margin-left: auto;
+  margin-right: auto;
   background: var(--brend-color);
   color: var(--white-color);
 
@@ -121,14 +151,16 @@ ul {
 }
 
 /*section-features*/
-.features-list > li:not(:last-child) {
-  padding-right: 24px;
+.features-list > li {
+  /*padding-right: 24px;*/
+  width: calc((100% - 72px) / 4);
 }
 .features-list {
+  gap: 24px;
   display: flex;
-  padding: 120px 0px 0px 0px;
+  padding: 120px; /*0px 0px 0px;*/
   margin: 0px 0px 120px 0px;
-  
+
   outline: 2px solid red;
 }
 
@@ -143,6 +175,7 @@ ul {
   letter-spacing: 0.02em;
 }
 .section-paragraph {
+  padding-bottom: 32px;
   margin: 0px;
   color: var(--main-color);
 
@@ -152,7 +185,8 @@ ul {
 
 /*section-What are we doing*/
 .Our-Team {
-  background: #f4f4fd;
+  background: var(--background-color-team);
+  outline: 2px solid red;
 }
 .section-title {
   text-align: center;
@@ -169,12 +203,13 @@ ul {
   display: flex;
   margin: 0px;
   padding-left: 0px;
+  outline: 2px solid red;
 }
 
-.section-img > li:not(:last-child) {
-  /* padding-right: 24px;*/
+.section-img > li {
+  padding-right: 24px;
   padding-bottom: 120px;
-  flex-basis: calc((100%-48px)/ 3);
+  /* width: calc((100% - 48px) / 3); */
 }
 
 .team {
@@ -184,12 +219,23 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list {
-  display: flex;
-  padding: 0px;
-  margin: 0px;
-  flex-basis: calc((100%-72px) / 4);
+.team > img {
+  padding-bottom: 32px;
 }
+.team-list {
+  gap: 24px;
+  display: flex;
+  padding: 0px 0px 120px 0px;
+
+  margin: 0px;
+  /* flex-basis: calc((100%-72px) / 4); */
+}
+
+.container > .team-list {
+  text-align: center;
+  outline: 2px solid red;
+}
+
 /*portfolio*/
 
 .button-filter {
@@ -212,13 +258,22 @@ ul {
 
 /*footer-text*/
 .footer {
+  outline: 2px solid red;
   background-color: var(--title-color);
 }
+
+.block-footer {
+  padding: 100px 0px 100px 0px;
+}
 .footer-text {
+  max-width: 264px;
+  padding: 0px;
+  margin: 0px;
   color: #e7e9fc;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 .footer .logo-second {
+  padding-top: 100px;
   color: var(--white-color);
 }
