@@ -53,6 +53,18 @@ img {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*header*/
 .header {
   /* outline: 2px solid red; */
@@ -200,6 +212,7 @@ img {
 }
 
 .team {
+  padding: 120px 0px;
   background: var(--background-color-team);
   /* outline: 2px solid red; */
 }
@@ -235,7 +248,6 @@ img {
 .team-list {
   gap: 24px;
   display: flex;
-  padding: 0px 0px 120px 0px;
 
   /* flex-basis: calc((100%-72px) / 4); */
 }
@@ -247,11 +259,16 @@ img {
 
 /*portfolio*/
 
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .list-filter {
   gap: 24px;
   justify-content: center;
   display: flex;
-  padding-top: 96px;
+
   margin-bottom: 72px;
 }
 .button-filter {
@@ -273,7 +290,7 @@ img {
 
 .list-element-filter {
   gap: 48px 24px;
-  padding-bottom: 120px;
+
   display: flex;
   flex-wrap: wrap;
 }
